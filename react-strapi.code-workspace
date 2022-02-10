@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../go/src/gitlab.pensionera.io/ui/future.pensionera.se"
+		},
+		{
+			"path": "../../go/src/gitlab.pensionera.io/ui/pensionera-strapi"
+		},
+		{
+			"path": "../../systems"
+		}
+	],
+	"settings": {}
+}
