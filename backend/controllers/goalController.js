@@ -1,4 +1,4 @@
-//Insall a package (for the spacinvader)
+//Install a package (for the spacinvader)
 const asyncHandler = require('express-async-handler')
 
 // Goal will have a bunch of mongoose methods of it
