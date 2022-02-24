@@ -1,7 +1,7 @@
 // Mongoose is the ODM (Object Document Mapper) for MongoDB
 const mongoose = require('mongoose')
 
-// Create the use schema, the fields that you want the use to have
+// Create the use schema, the fields that you want the user to have
 // Pass the schema you want as an object
 const userSchema = mongoose.Schema({
     name: {
