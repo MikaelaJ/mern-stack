@@ -75,7 +75,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
 // @desc    Get user user
 // @route   GET /api/users/me
-// @access  Public
+// @access  Private (protect routes with middleware)
 const getMe = asyncHandler(async (req, res) => {
     res.json({ message: 'User data information' })
 })
