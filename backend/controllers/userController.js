@@ -77,7 +77,15 @@ const loginUser = asyncHandler(async (req, res) => {
 // @route   GET /api/users/me
 // @access  Private (protect routes with middleware)
 const getMe = asyncHandler(async (req, res) => {
-    res.json({ message: 'User data information' })
+    const {_id, name, email} = await User.findById(req.user.id)
+
+    res.status(200).json({
+        id: _id,
+        name,
+        email
+
+    })
+    /* res.json({ message: 'User data information' }) */
 })
 
 // Create a function that generates a token
