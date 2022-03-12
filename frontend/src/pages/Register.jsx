@@ -25,7 +25,9 @@ function Register() {
        if(isSuccess || user ) {
            navigate('/')
        }
+       // Reset the state in authSlice
        dispatch(reset())
+       // Dependency array: will fire off useEffect if anything changes in this dependency array
     }, [user, isError, isSuccess, message, navigate, dispatch]);
 
     const onChange = (e) => {
