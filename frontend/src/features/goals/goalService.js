@@ -1,23 +1,20 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-// CREATESLICE: A function that accepts an initial state, an object of reducer functions, and a "slice name",
-// and automatically generates action creators and action types that correspond to the reducers and state.
+import axios from 'axios'
 
-const initialState = {
-    goals: [],
-    isError: false,
-    isSuccess: false,
-    isLoading: false,
-    messge: '',
+const API_URL = '/api/goals/'
+
+// Create new goal
+const createGoal = async (goalData, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+    const response = await axios.post(API_URL, goalData, config)
+    return response.data
 }
 
-export const goalSlice = createSlice({
-    name: 'goal',
-    initialState, 
-    reducers: {
-        reset: (state) => initialState
-    }
-})
+const goalService = {
+    createGoal,
+}
 
-// reset has to be exported from const actions
-export const {reset} = goalSlice.actions
-export default goalSlice.reducer
+export default goalService
