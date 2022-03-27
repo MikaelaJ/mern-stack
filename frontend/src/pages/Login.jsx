@@ -48,6 +48,7 @@ function Login() {
     if (isLoading) {
         return <Spinner />
     }
+    // TODO check why there is a 403 error when logging in
     return (
         <>
             <section className='heading'>
